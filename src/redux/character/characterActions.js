@@ -46,3 +46,19 @@ export const changeFilter = (season) => {
     payload: season,
   };
 };
+
+export const fetchUser = (id) => {
+  return (dispatch) => {
+    dispatch(fetchCharacterRequest);
+    axios
+      .get(`https://breakingbadapi.com/api/characters/${id}`)
+      .then((respone) => {
+        const character = respone.data;
+        dispatch(fetchCharacterSuccess(character));
+      })
+      .catch((error) => {
+        const errorMsg = error.message;
+        dispatch(fetchCharacterFailure(errorMsg));
+      });
+  };
+};
