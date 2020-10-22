@@ -10,6 +10,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("https://i.pinimg.com/736x/fe/c1/49/fec149faa3744e79645a6e2a0ebd6fc3.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 code {
@@ -29,4 +32,12 @@ code {
 .char_container {
   border: 1px solid red;
   margin: 10px;
+}
+
+.img-wrapper {
+  width: 200px;
+}
+
+.img-wrapper img {
+  width: 100%;
 }

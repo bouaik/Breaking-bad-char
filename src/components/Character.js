@@ -4,7 +4,9 @@ const Character = ({ character }) => {
   return (
     <div className="char_container">
       <p>{character.name}</p>
-      <img src={character.img} width="100px" alt="img" />
+      <div className="img-wrapper">
+        <img src={character.img} alt="img" />
+      </div>
       <div>{character.appearance}</div>
       <div>{character.nickname}</div>
     </div>
