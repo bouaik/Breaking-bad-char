@@ -32,7 +32,6 @@ const CharactersList = ({ data, fetchCharacters, filter, changeFilter }) => {
     <h2>{data.error}</h2>
   ) : (
     <div>
-      <h2>Breaking bad cast</h2>
       <SeasonFilter handleFilterChange={handleFilterChange} />
       <CharacterList>
         {charactersFiltred.map((character) => (
@@ -44,8 +43,6 @@ const CharactersList = ({ data, fetchCharacters, filter, changeFilter }) => {
 };
 
 const mapStateToProps = (state) => {
-  console.log(state);
-
   return {
     data: state.characters,
     filter: state.filter,

@@ -26,8 +26,6 @@ const CharcaterInfo = ({ data, fetchCharacter }) => {
 };
 
 const mapStateToProps = (state) => {
-  console.log(state.characters.characters);
-
   return {
     data: state.characters,
   };

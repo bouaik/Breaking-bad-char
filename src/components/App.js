@@ -6,7 +6,9 @@ import CharcaterInfo from "../containers/CharcaterInfo";
 function App() {
   return (
     <div className="App">
-      <Link to="/">home</Link>
+      <Link to="/">
+        <h2>Breaking bad cast</h2>
+      </Link>
       <Switch>
         <Route exact path="/">
           <CharactersList />
