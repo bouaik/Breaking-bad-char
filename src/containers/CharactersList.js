@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import Character from "../components/Character";
+import ShowCharacters from "../components/ShowCharacters";
 import SeasonFilter from "../components/SeasonsFilter";
 import { fetchCharacters, changeFilter } from "../redux";
 
@@ -30,11 +30,11 @@ const CharactersList = ({ data, fetchCharacters, filter, changeFilter }) => {
     <h2>{data.error}</h2>
   ) : (
     <div>
-      <h2>Users list</h2>
+      <h2>Breaking bad cast</h2>
       <SeasonFilter handleFilterChange={handleFilterChange} />
       <div className="all_char">
         {charactersFiltred.map((character) => (
-          <Character character={character} key={character.char_id} />
+          <ShowCharacters character={character} key={character.char_id} />
         ))}
       </div>
     </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Character = ({ character }) => {
+const ShowCharacters = ({ character }) => {
   return (
     <div className="char_container">
       <p>{character.name}</p>
@@ -15,4 +15,4 @@ const Character = ({ character }) => {
   );
 };
 
-export default Character;
+export default ShowCharacters;

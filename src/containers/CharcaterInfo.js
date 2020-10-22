@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { useParams } from "react-router-dom";
+import ShowCharacter from "../components/ShowCharacter";
 import { fetchCharacter } from "../redux";
 
 const CharcaterInfo = ({ data, fetchCharacter }) => {
@@ -18,14 +19,7 @@ const CharcaterInfo = ({ data, fetchCharacter }) => {
   ) : data.error ? (
     <h2>{data.error}</h2>
   ) : (
-    <div>
-      {character.map((character) => (
-        <div key={character.char_id}>
-          <h2>{character.name}</h2>
-          <img src={character.img} alt="char" width="400px" />
-        </div>
-      ))}
-    </div>
+    <ShowCharacter character={character} />
   );
 };
 
