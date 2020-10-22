@@ -4,7 +4,7 @@ import {
   FETCH_CHARACTER_REQUEST,
   FETCH_CHARACTER_SUCCESS,
   FETCH_CHARACTER_FAILURE,
-} from "./userTypes";
+} from "./characterTypes";
 
 export const fetchCharacterRequest = () => {
   return {
