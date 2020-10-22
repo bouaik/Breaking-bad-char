@@ -9,8 +9,24 @@ const CharcaterInfo = ({ data, fetchCharacter }) => {
   useEffect(() => {
     fetchCharacter(id);
   }, [fetchCharacter, id]);
+  let character = data.characters.filter(
+    (character) => parseInt(id) === character.char_id
+  );
 
-  return <div>hello character {id}</div>;
+  return data.loading ? (
+    <h2>Loading text</h2>
+  ) : data.error ? (
+    <h2>{data.error}</h2>
+  ) : (
+    <div>
+      {character.map((character) => (
+        <div key={character.char_id}>
+          <h2>{character.name}</h2>
+          <img src={character.img} alt="char" width="400px" />
+        </div>
+      ))}
+    </div>
+  );
 };
 
 const mapStateToProps = (state) => {
