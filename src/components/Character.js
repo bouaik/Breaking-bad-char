@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Character = ({ character }) => {
   return (
@@ -9,6 +10,7 @@ const Character = ({ character }) => {
       </div>
       <div>{character.appearance}</div>
       <div>{character.nickname}</div>
+      <Link to={`/show/${character.char_id}`}>Read more</Link>
     </div>
   );
 };
