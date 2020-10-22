@@ -1,13 +1,29 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import Character from "../components/Character";
+import SeasonFilter from "../components/SeasonsFilter";
+import { fetchCharacters, changeFilter } from "../redux";
 
-import { fetchCharacters } from "../redux";
-
-const CharactersList = ({ data, fetchCharacters }) => {
+const CharactersList = ({ data, fetchCharacters, filter, changeFilter }) => {
   useEffect(() => {
     fetchCharacters();
   }, [fetchCharacters]);
+
+  let charactersFiltred = data.characters;
+
+  if (filter === "All") {
+    charactersFiltred = data.characters;
+  } else {
+    charactersFiltred = charactersFiltred.filter(
+      (character) =>
+        character.appearance && character.appearance.includes(parseInt(filter))
+    );
+  }
+
+  const handleFilterChange = (e) => {
+    changeFilter(e.target.value);
+  };
+
   return data.loading ? (
     <h2>Loading text</h2>
   ) : data.error ? (
@@ -15,8 +31,9 @@ const CharactersList = ({ data, fetchCharacters }) => {
   ) : (
     <div>
       <h2>Users list</h2>
+      <SeasonFilter handleFilterChange={handleFilterChange} />
       <div className="all_char">
-        {data.characters.map((character) => (
+        {charactersFiltred.map((character) => (
           <Character character={character} key={character.char_id} />
         ))}
       </div>
@@ -29,11 +46,13 @@ const mapStateToProps = (state) => {
 
   return {
     data: state.characters,
+    filter: state.filter,
   };
 };
 
 const mapDispatchToProps = {
   fetchCharacters,
+  changeFilter,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(CharactersList);
