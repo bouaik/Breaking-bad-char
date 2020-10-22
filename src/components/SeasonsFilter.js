@@ -1,16 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Filter } from "./filter.styled";
 
 const SeasonFilter = ({ handleFilterChange }) => {
   const seasons = ["All", 1, 2, 3, 4, 5];
   return (
-    <div>
+    <Filter>
+      <h3>Filter Characters By Season : </h3>
       <select name="season" onChange={handleFilterChange}>
         {seasons.map((season) => (
           <option key={season}>{season}</option>
         ))}
       </select>
-    </div>
+    </Filter>
   );
 };
 SeasonFilter.propTypes = {
