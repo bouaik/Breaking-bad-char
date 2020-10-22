@@ -39,3 +39,10 @@ export const fetchCharacters = () => {
       });
   };
 };
+
+export const changeFilter = (season) => {
+  return {
+    type: "CHANGE_FILTER",
+    payload: season,
+  };
+};
