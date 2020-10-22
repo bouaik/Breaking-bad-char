@@ -8,5 +8,9 @@ export const Filter = styled.div`
   select {
     width: 150px;
     margin-left: 30px;
+    background: transparent;
+    border: 1px solid #000;
+    cursor: pointer;
+    outline: none;
   }
 `;
