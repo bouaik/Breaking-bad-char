@@ -22,10 +22,11 @@ code {
   padding-top: 10px;
 }
 
-.all_char {
+/* .all_char {
   display: flex;
   flex-wrap: wrap;
-}
+  justify-content: center;
+} */
 .char_container {
   border: 1px solid red;
   margin: 10px;

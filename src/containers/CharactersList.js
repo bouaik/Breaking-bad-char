@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import ShowCharacters from "../components/ShowCharacters";
 import SeasonFilter from "../components/SeasonsFilter";
 import { fetchCharacters, changeFilter } from "../redux";
+import { CharacterList } from "./CharacterList.styled";
 
 const CharactersList = ({ data, fetchCharacters, filter, changeFilter }) => {
   useEffect(() => {
@@ -33,11 +34,11 @@ const CharactersList = ({ data, fetchCharacters, filter, changeFilter }) => {
     <div>
       <h2>Breaking bad cast</h2>
       <SeasonFilter handleFilterChange={handleFilterChange} />
-      <div className="all_char">
+      <CharacterList>
         {charactersFiltred.map((character) => (
           <ShowCharacters character={character} key={character.char_id} />
         ))}
-      </div>
+      </CharacterList>
     </div>
   );
 };
