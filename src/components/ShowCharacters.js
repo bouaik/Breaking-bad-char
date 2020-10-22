@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const ShowCharacters = ({ character }) => {
@@ -13,6 +14,10 @@ const ShowCharacters = ({ character }) => {
       <Link to={`/show/${character.char_id}`}>Read more</Link>
     </div>
   );
+};
+
+ShowCharacters.propTypes = {
+  character: PropTypes.object.isRequired,
 };
 
 export default ShowCharacters;

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
 import ShowCharacters from "../components/ShowCharacters";
 import SeasonFilter from "../components/SeasonsFilter";
 import { fetchCharacters, changeFilter } from "../redux";
@@ -53,6 +54,13 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = {
   fetchCharacters,
   changeFilter,
+};
+
+CharactersList.propTypes = {
+  data: PropTypes.object.isRequired,
+  filter: PropTypes.string.isRequired,
+  fetchCharacters: PropTypes.func.isRequired,
+  changeFilter: PropTypes.func.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(CharactersList);

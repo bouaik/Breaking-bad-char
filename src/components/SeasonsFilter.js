@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const SeasonFilter = ({ handleFilterChange }) => {
   const seasons = ["All", 1, 2, 3, 4, 5];
@@ -11,6 +12,9 @@ const SeasonFilter = ({ handleFilterChange }) => {
       </select>
     </div>
   );
+};
+SeasonFilter.propTypes = {
+  handleFilterChange: PropTypes.func.isRequired,
 };
 
 export default SeasonFilter;

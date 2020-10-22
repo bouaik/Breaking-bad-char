@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const ShowCharacter = ({ character }) => {
   return (
@@ -12,5 +13,7 @@ const ShowCharacter = ({ character }) => {
     </div>
   );
 };
-
+ShowCharacter.propTypes = {
+  character: PropTypes.array.isRequired,
+};
 export default ShowCharacter;
