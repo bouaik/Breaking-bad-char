@@ -47,7 +47,7 @@ export const changeFilter = (season) => {
   };
 };
 
-export const fetchUser = (id) => {
+export const fetchCharacter = (id) => {
   return (dispatch) => {
     dispatch(fetchCharacterRequest);
     axios
