@@ -1,6 +1,7 @@
 import React from "react";
 import { Switch, Route, Link } from "react-router-dom";
 import CharactersList from "../containers/CharactersList";
+import CharcaterInfo from "../containers/CharcaterInfo";
 
 function App() {
   return (
@@ -10,6 +11,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <CharactersList />
+          </Route>
+          <Route exact path="/show/:id">
+            <CharcaterInfo />
           </Route>
           <Route>
             <div>404 not found</div>
