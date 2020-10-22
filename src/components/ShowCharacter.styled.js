@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const ShowCharacterr = styled.div`
   margin-top: 50px;
-  height: 97vh;
   h2 {
     text-align: center;
   }

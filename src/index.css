@@ -17,9 +17,22 @@ body {
     rgba(0, 0, 0, 1) 100%
   );
   background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.Logo {
+  color: #000;
+  margin: 20px 0;
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 900;
+}
+.Logo:hover {
+  color: #0011ff7e;
 }

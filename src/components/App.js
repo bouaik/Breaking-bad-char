@@ -6,8 +6,8 @@ import CharcaterInfo from "../containers/CharcaterInfo";
 function App() {
   return (
     <div className="App">
-      <Link to="/">
-        <h2>Breaking bad cast</h2>
+      <Link to="/" className="Logo">
+        Breaking Bad Cast
       </Link>
       <Switch>
         <Route exact path="/">
