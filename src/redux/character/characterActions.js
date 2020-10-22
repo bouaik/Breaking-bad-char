@@ -24,7 +24,7 @@ export const fetchCharacterFailure = (error) => {
   };
 };
 
-export const fetchUsers = () => {
+export const fetchCharacters = () => {
   return (dispatch) => {
     dispatch(fetchCharacterRequest);
     axios
