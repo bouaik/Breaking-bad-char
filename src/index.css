@@ -10,6 +10,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(48, 153, 45);
+  background: linear-gradient(
+    194deg,
+    rgba(48, 153, 45, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  background-repeat: no-repeat;
 }
 
 code {
@@ -20,22 +27,4 @@ code {
 .App {
   text-align: center;
   padding-top: 10px;
-}
-
-/* .all_char {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-} */
-.char_container {
-  border: 1px solid red;
-  margin: 10px;
-}
-
-.img-wrapper {
-  width: 200px;
-}
-
-.img-wrapper img {
-  width: 100%;
 }

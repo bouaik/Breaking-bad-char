@@ -6,20 +6,18 @@ import CharcaterInfo from "../containers/CharcaterInfo";
 function App() {
   return (
     <div className="App">
-      <div className="App">
-        <Link to="/">home</Link>
-        <Switch>
-          <Route exact path="/">
-            <CharactersList />
-          </Route>
-          <Route exact path="/show/:id">
-            <CharcaterInfo />
-          </Route>
-          <Route>
-            <div>404 not found</div>
-          </Route>
-        </Switch>
-      </div>
+      <Link to="/">home</Link>
+      <Switch>
+        <Route exact path="/">
+          <CharactersList />
+        </Route>
+        <Route exact path="/show/:id">
+          <CharcaterInfo />
+        </Route>
+        <Route>
+          <div>404 not found</div>
+        </Route>
+      </Switch>
     </div>
   );
 }

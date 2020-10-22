@@ -1,18 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { ShowCharacterss } from "./ShowCharacters.styled";
 
 const ShowCharacters = ({ character }) => {
   return (
-    <div className="char_container">
-      <p>{character.name}</p>
+    <ShowCharacterss>
+      <h3>{character.name}</h3>
       <div className="img-wrapper">
         <img src={character.img} alt="img" />
       </div>
-      <div>{character.appearance}</div>
-      <div>{character.nickname}</div>
-      <Link to={`/show/${character.char_id}`}>Read more</Link>
-    </div>
+      <div className="end">
+        <Link to={`/show/${character.char_id}`}>
+          <button>Read more</button>
+        </Link>
+      </div>
+    </ShowCharacterss>
   );
 };
 
