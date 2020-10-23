@@ -17,7 +17,7 @@ const CharcaterInfo = ({ data, fetchCharacter }) => {
   );
 
   return data.loading ? (
-    <h2>Loading text</h2>
+    <div class="loader">Loading...</div>
   ) : data.error ? (
     <h2>{data.error}</h2>
   ) : (
