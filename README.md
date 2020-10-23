@@ -59,7 +59,7 @@ Breaking-bad-char app built with React.js.
 
 ## Live Link
 
-[Click Here](https://calcualatorlhoussaine.herokuapp.com/)
+[Click Here](https://lhoussaine-breaking-bad.herokuapp.com/)
 
 <!-- BUILD WITH -->
 
