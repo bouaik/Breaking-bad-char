@@ -1,5 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
+// eslint-disable-next-line
 export const ShowCharacterr = styled.div`
   margin-top: 50px;
   h2 {

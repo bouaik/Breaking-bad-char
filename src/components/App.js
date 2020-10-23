@@ -1,7 +1,7 @@
-import React from "react";
-import { Switch, Route, Link } from "react-router-dom";
-import CharactersList from "../containers/CharactersList";
-import CharcaterInfo from "../containers/CharcaterInfo";
+import React from 'react';
+import { Switch, Route, Link } from 'react-router-dom';
+import CharactersList from '../containers/CharactersList';
+import CharcaterInfo from '../containers/CharcaterInfo';
 
 function App() {
   return (

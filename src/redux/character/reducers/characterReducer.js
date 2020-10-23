@@ -2,12 +2,12 @@ import {
   FETCH_CHARACTER_REQUEST,
   FETCH_CHARACTER_SUCCESS,
   FETCH_CHARACTER_FAILURE,
-} from "../characterTypes";
+} from '../characterTypes';
 
 const initialState = {
   loading: true,
   characters: [],
-  error: "",
+  error: '',
 };
 
 const characterReducer = (state = initialState, action) => {
@@ -21,7 +21,7 @@ const characterReducer = (state = initialState, action) => {
       return {
         loading: false,
         characters: action.payload,
-        error: "",
+        error: '',
       };
     case FETCH_CHARACTER_FAILURE:
       return {

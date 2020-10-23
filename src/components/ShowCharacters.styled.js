@@ -1,5 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
+// eslint-disable-next-line
 export const ShowCharacterss = styled.div`
   border: 1px solid #000;
   padding: 10px;

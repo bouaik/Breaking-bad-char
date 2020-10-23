@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
-import { useParams } from "react-router-dom";
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { useParams } from 'react-router-dom';
 
-import ShowCharacter from "../components/ShowCharacter";
-import { fetchCharacter } from "../redux";
+import ShowCharacter from '../components/ShowCharacter';
+import { fetchCharacter } from '../redux';
 
 const CharcaterInfo = ({ data, fetchCharacter }) => {
   const { id } = useParams();
@@ -12,10 +12,11 @@ const CharcaterInfo = ({ data, fetchCharacter }) => {
   useEffect(() => {
     fetchCharacter(id);
   }, [fetchCharacter, id]);
-  let character = data.characters.filter(
+  const character = data.characters.filter(
+    // eslint-disable-next-line
     (character) => parseInt(id) === character.char_id
   );
-
+  // eslint-disable-next-line
   return data.loading ? (
     <div className="loader">Loading...</div>
   ) : data.error ? (
@@ -25,17 +26,16 @@ const CharcaterInfo = ({ data, fetchCharacter }) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    data: state.characters,
-  };
-};
+const mapStateToProps = state => ({
+  data: state.characters,
+});
 
 const mapDispatchToProps = {
   fetchCharacter,
 };
 
 CharcaterInfo.propTypes = {
+  // eslint-disable-next-line
   data: PropTypes.object.isRequired,
   fetchCharacter: PropTypes.func.isRequired,
 };
