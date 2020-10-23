@@ -27,7 +27,7 @@ const CharactersList = ({ data, fetchCharacters, filter, changeFilter }) => {
   };
 
   return data.loading ? (
-    <div class="loader">Loading...</div>
+    <div className="loader">Loading...</div>
   ) : data.error ? (
     <h2>{data.error}</h2>
   ) : (
