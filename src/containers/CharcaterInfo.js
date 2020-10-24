@@ -22,7 +22,9 @@ const CharcaterInfo = ({ data, fetchCharacter }) => {
   ) : data.error ? (
     <h2>{data.error}</h2>
   ) : (
-    <ShowCharacter character={character} />
+    character.map(character => (
+      <ShowCharacter key={character.char_id} character={character} />
+    ))
   );
 };
 
@@ -35,8 +37,10 @@ const mapDispatchToProps = {
 };
 
 CharcaterInfo.propTypes = {
-  // eslint-disable-next-line
-  data: PropTypes.object.isRequired,
+  data: PropTypes.shape({
+    error: PropTypes.string.isRequired,
+    characters: PropTypes.arrayOf(PropTypes.object).isRequired,
+  }).isRequired,
   fetchCharacter: PropTypes.func.isRequired,
 };
 

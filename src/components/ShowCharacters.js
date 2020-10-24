@@ -18,8 +18,11 @@ const ShowCharacters = ({ character }) => (
 );
 
 ShowCharacters.propTypes = {
-  // eslint-disable-next-line
-  character: PropTypes.object.isRequired,
+  character: PropTypes.shape({
+    char_id: PropTypes.number.isRequired,
+    img: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default ShowCharacters;

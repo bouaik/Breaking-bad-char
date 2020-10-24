@@ -9,43 +9,43 @@ import {
 export const fetchCharacterRequest = () => ({
   type: FETCH_CHARACTER_REQUEST,
 });
-export const fetchCharacterSuccess = (characters) => ({
+export const fetchCharacterSuccess = characters => ({
   type: FETCH_CHARACTER_SUCCESS,
   payload: characters,
 });
-export const fetchCharacterFailure = (error) => ({
+export const fetchCharacterFailure = error => ({
   type: FETCH_CHARACTER_FAILURE,
   payload: error,
 });
 
-export const fetchCharacters = () => (dispatch) => {
+export const fetchCharacters = () => dispatch => {
   dispatch(fetchCharacterRequest);
   axios
     .get('https://breakingbadapi.com/api/characters')
-    .then((respone) => {
+    .then(respone => {
       const characters = respone.data;
       dispatch(fetchCharacterSuccess(characters));
     })
-    .catch((error) => {
+    .catch(error => {
       const errorMsg = error.message;
       dispatch(fetchCharacterFailure(errorMsg));
     });
 };
 
-export const changeFilter = (season) => ({
+export const changeFilter = season => ({
   type: 'CHANGE_FILTER',
   payload: season,
 });
 
-export const fetchCharacter = (id) => (dispatch) => {
+export const fetchCharacter = id => dispatch => {
   dispatch(fetchCharacterRequest);
   axios
     .get(`https://breakingbadapi.com/api/characters/${id}`)
-    .then((respone) => {
+    .then(respone => {
       const character = respone.data;
       dispatch(fetchCharacterSuccess(character));
     })
-    .catch((error) => {
+    .catch(error => {
       const errorMsg = error.message;
       dispatch(fetchCharacterFailure(errorMsg));
     });

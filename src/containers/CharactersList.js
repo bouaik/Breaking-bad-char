@@ -55,8 +55,10 @@ const mapDispatchToProps = {
 };
 
 CharactersList.propTypes = {
-  // eslint-disable-next-line
-  data: PropTypes.object.isRequired,
+  data: PropTypes.shape({
+    error: PropTypes.string.isRequired,
+    characters: PropTypes.arrayOf(PropTypes.object).isRequired,
+  }).isRequired,
   filter: PropTypes.string.isRequired,
   fetchCharacters: PropTypes.func.isRequired,
   changeFilter: PropTypes.func.isRequired,
