@@ -1,6 +1,7 @@
 import {
   fetchCharacterSuccess,
   fetchCharacterRequest,
+  fetchCharacterFailure,
 } from '../redux/character/characterActions';
 
 describe('actions', () => {
@@ -15,10 +16,20 @@ describe('actions', () => {
     };
     expect(fetchCharacterSuccess(data)).toEqual(expectedAction);
   });
-  it('should get characters data', () => {
+
+  it('should request for data', () => {
     const expectedAction = {
       type: 'FETCH_CHARACTER_REQUEST',
     };
     expect(fetchCharacterRequest()).toEqual(expectedAction);
+  });
+
+  it('should return error when data is bot etched', () => {
+    const error = 'error while fetching data';
+    const expectedAction = {
+      type: 'FETCH_CHARACTER_FAILURE',
+      payload: error,
+    };
+    expect(fetchCharacterFailure(error)).toEqual(expectedAction);
   });
 });
