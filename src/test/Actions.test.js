@@ -1,4 +1,7 @@
-import { fetchCharacterSuccess } from '../redux/character/characterActions';
+import {
+  fetchCharacterSuccess,
+  fetchCharacterRequest,
+} from '../redux/character/characterActions';
 
 describe('actions', () => {
   it('should get characters data', () => {
@@ -11,5 +14,11 @@ describe('actions', () => {
       payload: data,
     };
     expect(fetchCharacterSuccess(data)).toEqual(expectedAction);
+  });
+  it('should get characters data', () => {
+    const expectedAction = {
+      type: 'FETCH_CHARACTER_REQUEST',
+    };
+    expect(fetchCharacterRequest()).toEqual(expectedAction);
   });
 });
