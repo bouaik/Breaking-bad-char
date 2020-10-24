@@ -7,7 +7,7 @@ const SeasonFilter = ({ handleFilterChange }) => {
   return (
     <Filter>
       <h3>Filter Characters By Season : </h3>
-      <select name="season" onChange={handleFilterChange}>
+      <select name="season" onChange={handleFilterChange} data-testid="select">
         {seasons.map((season) => (
           <option key={season}>{season}</option>
         ))}
