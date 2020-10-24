@@ -11,7 +11,7 @@ it('render the img in the dom', () => {
   const { getByTestId } = render(
     <Router>
       <ShowCharacters character={character} />
-    </Router>
+    </Router>,
   );
   expect(getByTestId('img')).toBeInTheDocument();
 });
@@ -21,7 +21,7 @@ it('render the name in the dom', () => {
   const { getByTestId } = render(
     <Router>
       <ShowCharacters character={character} />
-    </Router>
+    </Router>,
   );
   expect(getByTestId('name')).toBeInTheDocument();
 });
@@ -31,7 +31,7 @@ it('render the button in the dom', () => {
   const { getByTestId } = render(
     <Router>
       <ShowCharacters character={character} />
-    </Router>
+    </Router>,
   );
   expect(getByTestId('btn')).toBeInTheDocument();
 });

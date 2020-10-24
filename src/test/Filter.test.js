@@ -8,7 +8,7 @@ afterEach(cleanup);
 it('render categorys', () => {
   const handleFilterChange = () => 1 + 2;
   const { getByTestId } = render(
-    <SeasonsFilter handleFilterChange={handleFilterChange} />
+    <SeasonsFilter handleFilterChange={handleFilterChange} />,
   );
   expect(getByTestId('select')).toBeInTheDocument();
 });
