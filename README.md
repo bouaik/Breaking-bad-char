@@ -57,6 +57,10 @@ Breaking-bad-char app built with React.js.
 - Single page application
 - Fetching data from breaking bad api [here](https://breakingbadapi.com/)
 
+## Video Presentation
+
+[Click Here](https://youtu.be/ervr_vty4wU)
+
 ## Live Link
 
 [Click Here](https://lhoussaine-breaking-bad.herokuapp.com/)
