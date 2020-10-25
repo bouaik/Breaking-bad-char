@@ -101,6 +101,12 @@ then go to this url
 http://localhost:3000/
 ```
 
+To run tests
+
+```
+yarn test
+```
+
 Now you can successfully open the app locally in your browser.
 
 <!-- CONTACT -->
