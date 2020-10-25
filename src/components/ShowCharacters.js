@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { ShowCharacterss } from './ShowCharacters.styled';
+import ShowCharacterss from './ShowCharacters.styled';
 
 const ShowCharacters = ({ character }) => (
   <ShowCharacterss>

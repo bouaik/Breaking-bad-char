@@ -13,8 +13,7 @@ const CharcaterInfo = ({ data, fetchCharacter }) => {
     fetchCharacter(id);
   }, [fetchCharacter, id]);
   const character = data.characters.filter(
-    // eslint-disable-next-line
-    (character) => parseInt(id) === character.char_id
+    character => parseInt(id, 10) === character.char_id,
   );
   // eslint-disable-next-line
   return data.loading ? (

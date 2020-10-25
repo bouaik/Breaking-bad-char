@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Filter } from './filter.styled';
+import Filter from './filter.styled';
 
 const SeasonFilter = ({ handleFilterChange }) => {
   const seasons = ['All', 1, 2, 3, 4, 5];

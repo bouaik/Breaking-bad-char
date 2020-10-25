@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
-// eslint-disable-next-line
-export const Filter = styled.div`
+const Filter = styled.div`
   display: flex;
   justify-content: center;
   margin: 30px 0;
@@ -15,3 +14,5 @@ export const Filter = styled.div`
     outline: none;
   }
 `;
+
+export default Filter;

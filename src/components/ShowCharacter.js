@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ShowCharacterr } from './ShowCharacter.styled';
+import ShowCharacterr from './ShowCharacter.styled';
 
 const ShowCharacter = ({ character }) => (
   <ShowCharacterr>

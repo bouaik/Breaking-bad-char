@@ -19,8 +19,8 @@ const CharactersList = ({
     charactersFiltred = data.characters;
   } else {
     charactersFiltred = charactersFiltred.filter(
-      // eslint-disable-next-line
-      (character) => character.appearance && character.appearance.includes(parseInt(filter)),
+      character => character.appearance
+        && character.appearance.includes(parseInt(filter, 10)),
     );
   }
 

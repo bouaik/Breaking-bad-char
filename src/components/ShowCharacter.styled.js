@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
-// eslint-disable-next-line
-export const ShowCharacterr = styled.div`
+const ShowCharacterr = styled.div`
   margin-top: 50px;
   h2 {
     text-align: center;
@@ -19,3 +18,5 @@ export const ShowCharacterr = styled.div`
     justify-content: space-evenly;
   }
 `;
+
+export default ShowCharacterr;

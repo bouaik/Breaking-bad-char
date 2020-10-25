@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
-// eslint-disable-next-line
-export const ShowCharacterss = styled.div`
+const ShowCharacterss = styled.div`
   border: 1px solid #000;
   padding: 10px;
   margin: 10px;
@@ -27,3 +26,5 @@ export const ShowCharacterss = styled.div`
     background: #18753a;
   }
 `;
+
+export default ShowCharacterss;
